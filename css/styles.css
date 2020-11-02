@@ -11,3 +11,21 @@ h2{
     font-size:20px;
     padding:10px, 10px, 0px, 10px;
 }
+
+.data-text{
+    font-family: Helvetica, sans-serif;
+    color:rgb(41, 94, 192);
+}
+.regular-text{
+    font-family:'Times New Roman', Times, serif;
+    color:rgb(41, 192, 134)
+}
+
+.highlight-text{
+    font-family: 'Quicksand', sans-serif;
+    color:rgb(50, 31, 160)
+}
+
+body{
+    background-color:salmon
+}
