@@ -41,6 +41,7 @@ table{
 }
 
 th, td{
-    width: 50px;
+    width: 60px;
     text-align:center;
+    vertical-align: middle;
 }
