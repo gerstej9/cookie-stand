@@ -1,50 +1,29 @@
 hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', 
 '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', 'Total' ];
-var seattle = {
-    minHourCustomer: 23,
-    maxHourCustomer: 65,
-    averageCookies: 6.3,
-    saleArray:[],
-    total: 0,
+var Cities = []
+function City(name, minHourCustomer, maxHourCustomer,averageCookies, saleArray, total) {
+    this.name = name;
+    this.minHourCustomer = minHourCustomer;
+    this.maxHourCustomer = maxHourCustomer;
+    this.averageCookies = averageCookies;
+    this.saleArray = saleArray;
+    this.total = total;
+
+    Cities.push(this);
 }
 
-var tokyo = {
-    minHourCustomer: 3,
-    maxHourCustomer: 24,
-    averageCookies: 1.2,
-    saleArray: [],
-    total: 0,
-}
+var seattle = new City('Seattle', 23, 65, 6.3, [], 0);
 
-var dubai = {
-    minHourCustomer: 11,
-    maxHourCustomer: 38,
-    averageCookies: 3.7,
-    saleArray: [],
-    total: 0,
-}
+var tokyo = new City('Tokyo', 3, 24, 1.2, [], 0);
 
-var paris = {
-    minHourCustomer: 20,
-    maxHourCustomer: 38,
-    averageCookies: 2.3,
-    saleArray: [],
-    total: 0,
-}
+var dubai = new City('Dubai', 11, 38, 3.7, [], 0);
 
-var lima = {
-    minHourCustomer: 2,
-    maxHourCustomer: 16,
-    averageCookies: 4.6,
-    saleArray: [],
-    total: 0,
-}
+var paris = new City('Paris', 20, 38, 2.3, [], 0);
+
+var lima = new City('Lima', 2, 16, 4.6, [], 0);
 
 
 
-
-
-//console.log(seattle.randomInt(seattle.minHourCustomer, seattle.maxHourCustomer));
 
 var cityCookiesMethods = {
     randomInt: function getRandomIntInclusive(min, max){
