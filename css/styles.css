@@ -29,3 +29,18 @@ h2{
 body{
     background-color:salmon
 }
+
+/* https://www.w3schools.com/css/css_table.asp */
+table,th,td{
+    border:1px solid black;
+}
+
+table{
+    table-layout: fixed;
+    width: 80%;
+}
+
+th, td{
+    width: 50px;
+    text-align:center;
+}
