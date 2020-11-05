@@ -1,5 +1,7 @@
 hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', 
 '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', 'Daily Location Total' ];
+hoursStaff = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', 
+'1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm' ];
 percentMaxCustomer = [0.5, 0.75, 1.0, 0.6, 0.8, 1.0, 0.7, 0.4, 0.6, 0.9, 0.7,
 0.5, 0.3, 0.4]
 var Cities = []
@@ -99,9 +101,21 @@ function makeHeader(tableId){
     tableId.appendChild(tableRowHead);
     var thHead = document.createElement('th');
     tableRowHead.appendChild(thHead);
-    for(var i = 0; i < hours.length; i++){
+    console.log(tableId);
+    if(tableId == tableBodySales){
+        array = this.saleArray;
+        total = this.total;
+        hoursArray = hours        
+    }
+    if(tableId == tableBodyStaff){
+        array = this.staffArray;
+        total = '';
+        hoursArray = hoursStaff;
+        
+    }
+    for(var i = 0; i < hoursArray.length; i++){
         thHead = document.createElement('th');
-        thHead.textContent = hours[i];
+        thHead.textContent = hoursArray[i];
         tableRowHead.appendChild(thHead);
     }
 
@@ -114,7 +128,7 @@ City.prototype.renderTBody = function(tableId){
     tableRowData.appendChild(tdRow);
     if(tableId == tableBodySales){
         array = this.saleArray;
-        total = this.total
+        total = this.total;
     }
     if(tableId == tableBodyStaff){
         array = this.staffArray;
@@ -164,7 +178,6 @@ function makeFooterStaff(){
             for(var j = 0; j < Cities.length; j++){
                 hourlyStaffLocations += Cities[j].staffArray[i];
             }
-            console.log(hourlyStaffLocations);
         var thFoot = document.createElement('th');
         thFoot.textContent = (hourlyStaffLocations);
         tableRowFoot.appendChild(thFoot);
