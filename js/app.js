@@ -142,6 +142,7 @@ City.prototype.renderTBody = function(tableId){
     var tdRow = document.createElement('td');
     tdRow.textContent = total;
     tableRowData.appendChild(tdRow);
+
 }
 
 function makeFooter(tableId){
