@@ -4,6 +4,7 @@ Lab 06 for Code 201
 ## Contributors
 * This website has been built with help from the instructors of Codefellows Code 201 as well as fellow classmates.
 * MDN web docs supplied Math. functions used in this web page
+* W3 Schools
 
 ## Author
 James Gerstenberger
