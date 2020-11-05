@@ -129,19 +129,25 @@ City.prototype.renderTBody = function(tableId){
     if(tableId == tableBodySales){
         array = this.saleArray;
         total = this.total;
+        for(var i = 0; i < hours.length-1; i++){
+            var tdRow = document.createElement('td');
+            tdRow.textContent = array[i];
+            tableRowData.appendChild(tdRow);
+        }
+        var tdRow = document.createElement('td');
+        tdRow.textContent = total;
+        tableRowData.appendChild(tdRow);
     }
     if(tableId == tableBodyStaff){
         array = this.staffArray;
         total = ''
+        for(var i = 0; i < hoursStaff.length; i++){
+            var tdRow = document.createElement('td');
+            tdRow.textContent = array[i];
+            tableRowData.appendChild(tdRow);
+        }
     }
-    for(var i = 0; i < hours.length-1; i++){
-        var tdRow = document.createElement('td');
-        tdRow.textContent = array[i];
-        tableRowData.appendChild(tdRow);
-    }
-    var tdRow = document.createElement('td');
-    tdRow.textContent = total;
-    tableRowData.appendChild(tdRow);
+
 
 }
 
@@ -183,8 +189,6 @@ function makeFooterStaff(){
         thFoot.textContent = (hourlyStaffLocations);
         tableRowFoot.appendChild(thFoot);
     }
-    var thFoot = document.createElement('th');
-    tableRowFoot.appendChild(thFoot);
 }
 
 makeHeader(tableBodySales);
