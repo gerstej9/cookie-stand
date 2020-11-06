@@ -63,7 +63,6 @@ header img{
 }
 
 header h2{
-    width; 10%;
     text-decoration:underline;
 }
 
@@ -165,4 +164,8 @@ div.merch section img{
     font-size:30px;
     padding:0px;
     color:black;
+}
+
+fieldset{
+    border:2px solid black;
 }
