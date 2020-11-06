@@ -89,6 +89,7 @@ a.sales-page img{
     width:10%;
     float:left;
     margin:20;
+    border:none;
 }
 
 
@@ -235,7 +236,7 @@ label{
 footer h3{
     float:left;
     text-align:left;
-    margin: 40px 0px 40px 30%;
+    margin: 40px 0px 40px 24%;
     border:2px solid black;
     padding:30px;
     color:silver;
