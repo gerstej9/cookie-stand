@@ -196,7 +196,6 @@ function main(){
     for (i = 0; i < Cities.length; i++){
         Cities[i].renderTBody(tableBodySales);
     }
-    console.log(Cities.length);
     
     makeFooter(tableBodySales);
 
@@ -218,11 +217,6 @@ function addLocation(event){
     tableBodySales.innerHTML = '';
     tableBodyStaff.innerHTML = '';
     main();
-    // newStore.renderTBody(tableBodySales);
-    // newStore.renderTBody(tableBodyStaff);
-
-    // makeFooter(tableBodySales);
-    // makeFooter(tableBodyStaff);
 }
 
 //Executable Code
