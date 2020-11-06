@@ -1,22 +1,27 @@
 //Global Variables
 
+//Hours array for header and to generate hourly values of cookies sold
 hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', 
 '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', 'Daily Location Total' ];
 
+//Seperate hours array for staff with last value of hours array 'daily location total' removed
 hoursStaff = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', 
 '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm' ];
 
+//Percentage weighting for average customers per hour (stretch)
 percentMaxCustomer = [0.5, 0.75, 1.0, 0.6, 0.8, 1.0, 0.7, 0.4, 0.6, 0.9, 0.7,
 0.5, 0.3, 0.4]
 
+//Establishing array for constructo function cities
 var Cities = []
 
+//Establishing variable for getting table element for sales table
 var tableBodySales = document.getElementById('table');
 
+//Establishing variable for getting table element for staff table
 var tableBodyStaff = document.getElementById('staff');
 
 //Constructor Function
-
 function City(name, minHourCustomer, maxHourCustomer,averageCookies, hourlyCustomers, saleArray, total, staffArray) {
     this.name = name;
     this.minHourCustomer = minHourCustomer;
@@ -31,7 +36,6 @@ function City(name, minHourCustomer, maxHourCustomer,averageCookies, hourlyCusto
 }
 
 //Prototypes
-
 City.prototype.randomInt = function (){
     for(var i = 0; i < hours.length-1; i++){
         var customerPerHour = Math.floor(Math.random() * (this.maxHourCustomer - this.minHourCustomer + 1) + this.minHourCustomer);
@@ -41,6 +45,7 @@ City.prototype.randomInt = function (){
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 //Function taken from above URL and MDN web docs
 
+//mMethod
 City.prototype.hourSales = function(){
     this.saleArray = []
     for(var i = 0; i<hours.length-1; i++){
@@ -102,6 +107,10 @@ new City('Tokyo', 3, 24, 1.2, [], 0);
 new City('Dubai', 11, 38, 3.7, [], 0);
 new City('Paris', 20, 38, 2.3, [], 0);
 new City('Lima', 2, 16, 4.6, [], 0);
+
+//Event Listeners
+var formEl = document.getElementById("form");
+formEl.addEventListener('submit', addLocation);
 
 
 //Helper Functions
@@ -214,7 +223,6 @@ function addLocation(event){
     if (event.target.location.value == '' || event.target.minHourCustomer.value == '' || event.target.maxHourCustomer.value == '' || 
     event.target.averageCookie.value == ''){
     }else{
-        console.log(event.target.minHourCustomerlvalue)
     var newStore = new City(event.target.location.value, parseInt(event.target.minHourCustomer.value), parseInt(event.target.maxHourCustomer.value), 
     parseInt(event.target.averageCookie.value), [], 0);
     generateAll(Cities);
@@ -233,6 +241,3 @@ main();
 
 
 
-//Event Listeners
-var formEl = document.getElementById("form");
-formEl.addEventListener('submit', addLocation);
