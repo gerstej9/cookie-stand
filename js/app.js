@@ -34,7 +34,6 @@ function City(name, minHourCustomer, maxHourCustomer,averageCookies, hourlyCusto
 
 City.prototype.randomInt = function (){
     for(var i = 0; i < hours.length-1; i++){
-        console.log(this.name,this.maxHourCustomer);
         var customerPerHour = Math.floor(Math.random() * (this.maxHourCustomer - this.minHourCustomer + 1) + this.minHourCustomer);
         this.hourlyCustomers.push(customerPerHour);
     }
@@ -190,47 +189,46 @@ function makeFooterStaff(){
     }
 }
 
+function main(){
+
+    makeHeader(tableBodySales);
+
+    for (i = 0; i < Cities.length; i++){
+        Cities[i].renderTBody(tableBodySales);
+    }
+    console.log(Cities.length);
+    
+    makeFooter(tableBodySales);
+
+    makeHeader(tableBodyStaff);
+
+    for (i = 0; i < Cities.length; i++){
+        Cities[i].renderTBody(tableBodyStaff);
+        }
+
+    makeFooter(tableBodyStaff);
+}
 
 // Event Handlers 
 function addLocation(event){
     event.preventDefault();
-    new City(event.target.location.value, parseInt(event.target.minHourCustomer.value), parseInt(event.target.maxHourCustomer.value), 6.3, [], 0);
-    // console.log(event.target.location.value);
-    // console.log(event.target.minHourCustomer.value);
-    // console.log(event.target.maxHourCustomer.value);
-    // console.log(Cities);
+    var newStore = new City(event.target.location.value, parseInt(event.target.minHourCustomer.value), parseInt(event.target.maxHourCustomer.value), 
+    parseInt(event.target.averageCookie.value), [], 0);
     generateAll(Cities);
-    
-    for (i = Cities.length-1; i < Cities.length; i++){
-        Cities[i].renderTBody(tableBodySales);
-    }
+    tableBodySales.innerHTML = '';
+    tableBodyStaff.innerHTML = '';
+    main();
+    // newStore.renderTBody(tableBodySales);
+    // newStore.renderTBody(tableBodyStaff);
 
-    for (i = Cities.length-1; i < Cities.length; i++){
-        Cities[i].renderTBody(tableBodyStaff);
-        }
-    makeFooter(tableBodySales);
-    makeFooter(tableBodyStaff);
-
+    // makeFooter(tableBodySales);
+    // makeFooter(tableBodyStaff);
 }
 
 //Executable Code
+
 generateAll(Cities);
-
-makeHeader(tableBodySales);
-
-for (i = 0; i < Cities.length; i++){
-    Cities[i].renderTBody(tableBodySales);
-}
-
-makeFooter(tableBodySales);
-
-makeHeader(tableBodyStaff);
-
-for (i = 0; i < Cities.length; i++){
-    Cities[i].renderTBody(tableBodyStaff);
-    }
-
-makeFooter(tableBodyStaff);
+main();
 
 
 
