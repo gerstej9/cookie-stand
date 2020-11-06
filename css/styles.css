@@ -41,6 +41,7 @@ table{
     table-layout: fixed;
     width: 80%;
     margin: 0px 20px 20px 20px;
+    background-color:pink;
 
 }
 
@@ -77,6 +78,7 @@ a img{
     margin:10px 50px;
     border-radius: 20px 70px 10px 60px;
     float:left;
+    border: 2px solid black;
 }
 
 a.sales-page{
@@ -102,6 +104,7 @@ main.index div section.location{
     float:left;
     margin:20px;
     width: 25%;
+    background-color:pink;
 }
 
 main.index h3{
@@ -117,7 +120,7 @@ main.index div img{
     float:left;
     width: auto;
     height: 150px;
-
+    border: 2px solid black;
     margin: 2% 5% 2% 5%;
 }
 
@@ -126,6 +129,7 @@ main.index div img{
     width:50%;
     height:auto;
     margin:10px 20px;
+    border: 2px solid black;
 }
 
 #family-text{
@@ -136,6 +140,7 @@ main.index div img{
     float:left;
     width:300px;
     margin:30px 10px;
+    background-color:pink;
 }
 
 footer img{
@@ -144,10 +149,11 @@ footer img{
     margin-right:auto; */
     width: 60%;
     float:right;
+    border: 2px solid black;
+    margin: 0px 20px 20px 0px;
 }
 
 footer p{
-    display:block;
     float:left;
     font-family: 'Quicksand', sans-serif;
     color:rgb(50, 31, 160);
@@ -156,7 +162,7 @@ footer p{
     padding: 7px;
     margin:10px 0px 0px 60px;
     border: 5px double black;
-
+    background-color:pink;
 
 }
 
@@ -167,6 +173,7 @@ main.index div section p{
     float:left;
     margin:40px;
     width: 25%;
+    background-color:pink;
 }
 
 div.merch section img{
@@ -215,4 +222,28 @@ h2.highlight-text {
     margin:20px;
     float:left;
     width:33%;
+}
+
+fieldset{
+    background-color:purple;
+}
+
+label{
+    color:silver;
+}
+
+footer h3{
+    float:left;
+    text-align:left;
+    margin: 40px 0px 40px 30%;
+    border:2px solid black;
+    padding:30px;
+    color:silver;
+    background-color:purple;
+    width:50%;
+    font-size:20px;
+}
+
+main{
+    margin-left:40px;
 }
