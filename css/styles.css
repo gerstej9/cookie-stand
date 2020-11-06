@@ -38,12 +38,15 @@ table,th,td{
 table{
     table-layout: fixed;
     width: 80%;
+    margin: 0px 20px 20px 20px;
+
 }
 
 th, td{
-    width: 60px;
+    width: 80px;
     text-align:center;
     vertical-align: middle;
+    word-wrap: break-word;
 }
 
 header h1{
@@ -72,6 +75,16 @@ a img{
     margin:10px 50px;
     border-radius: 20px 70px 10px 60px;
     float:left;
+}
+
+a.sales-page{
+    text-align:left;
+    /* float:left; */
+}
+a.sales-page img{
+    width:10%;
+    float:left;
+    margin:20;
 }
 
 
@@ -168,4 +181,35 @@ div.merch section img{
 
 fieldset{
     border:2px solid black;
+    width:25%;
+    margin:1%;
+    padding:5px;
+}
+
+input {
+    margin:2px;
+    float:right;
+    text-align:center;
+}
+
+label{
+    float:left;
+    margin:2px;
+}
+
+button{
+    float:left;
+    margin: 20px;
+}
+
+legend{
+    background-color:rgb(182, 185, 189);
+    border-radius:5px;
+    border: 1px solid black;
+}
+
+h2.regular-text {
+    margin:20px;
+    float:left;
+    width:33%;
 }

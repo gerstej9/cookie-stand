@@ -211,12 +211,17 @@ function main(){
 // Event Handlers 
 function addLocation(event){
     event.preventDefault();
+    if (event.target.location.value == '' || event.target.minHourCustomer.value == '' || event.target.maxHourCustomer.value == '' || 
+    event.target.averageCookie.value == ''){
+    }else{
+        console.log(event.target.minHourCustomerlvalue)
     var newStore = new City(event.target.location.value, parseInt(event.target.minHourCustomer.value), parseInt(event.target.maxHourCustomer.value), 
     parseInt(event.target.averageCookie.value), [], 0);
     generateAll(Cities);
     tableBodySales.innerHTML = '';
     tableBodyStaff.innerHTML = '';
     main();
+}
 }
 
 //Executable Code

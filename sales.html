@@ -10,13 +10,16 @@
         <header>
             <h1 class = "highlight-text">Salmon Cookie Sales</h1>
             <nav>
-                <a href = index.html>Home</a>
+                <a class = "sales-page" href = index.html> <img src = "https://github.com/codefellows/seattle-201d69/blob/main/class-08/lab-b/assets/salmon.png?raw=true">
+                </a>
+                <h2> Click on our fishy friend to return to our home page!</h2>
+
             </nav>
         </header>
         <main>
             <br/>
-            <h2 class = "regular-text">At Pat's Salmon Cookies we are always looking to expand to new locations. Enter the information
-                below for a location you would like to see and maybe we'll open shop!
+            <h2 class = "regular-text" >At Pat's Salmon Cookies we are always looking to expand to new locations. Enter the information
+                below for a location you would like to see and maybe we'll open a shop!
             </h2>
             <br/>
             <section id = "form">
@@ -24,13 +27,13 @@
             <fieldset>
                 <legend>Choose our newest location!</legend>
                 <label for = "location">City:</label>
-                <input type = "text" name ="location">
+                <input type = "text" name ="location" value = "Pat's Salmon Shack">
                 <label for = "minHourCustomer">Minimum Customers per Hour:</label>
-                <input type = "text" name = "minHourCustomer">
+                <input type = "number" name = "minHourCustomer" value = "10">
                 <label for = "maxHourCustomer">Maximum Customers per Hour:</label>
-                <input type = "text" name = "maxHourCustomer">
-                <label for = "averageCookie">Average Cookie Sales per Hour:</label>
-                <input type = "text" name = "averageCookie">
+                <input type = "number" name = "maxHourCustomer" value = "20">
+                <label for = "averageCookie">Average Cookie Sales per Customer:</label>
+                <input type = "number" name = "averageCookie" value = "5">
                 <button>Submit</button>
             </fieldset>
         </form>
